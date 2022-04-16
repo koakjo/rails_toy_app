@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @first_user = User.first
-    @first_micropost = @first_user.microposts.first
+    @first_user.microposts.first.nil? ? @first_micropost = nil : @first_micropost = @first_user.microposts.first
   end
 
   # GET /users/new

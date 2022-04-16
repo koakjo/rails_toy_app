@@ -12,7 +12,7 @@
 
 <p>
   <strong>first_micropost:</strong>
-  <%= @first_micropost.content %>
+  <%= ( @first_micropost.nil? ? "This user did not post Micropost yet." : @first_micropost.content) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
